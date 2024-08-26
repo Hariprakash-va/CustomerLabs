@@ -1,0 +1,288 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Body Styling */
+body {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  background-color: #e5f1f6;
+  color: #333;
+}
+
+/* App Container */
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Header */
+.header {
+  background-color: #4f6262;
+  color: #fff;
+  padding: 10px 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.header .container {
+  display: flex;
+  justify-content: flex-start; /* Aligns content to the left */
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0px 20px;
+}
+
+.header .logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff; /* Ensures the logo is white */
+  margin-right: auto;
+}
+
+.header .nav ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.header .nav ul li {
+  margin-left: 20px;
+}
+
+.header .nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.header .nav ul li a:hover {
+  color: #e0e0e0;
+}
+
+/* Main Content Styling */
+.main-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 0;
+  margin: 0;
+}
+
+/* Heading Styles */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+h3 {
+  font-size: 1.75rem;
+  margin-bottom: 10px;
+}
+
+/* Paragraphs */
+p {
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+/* Buttons */
+button {
+  background-color: #08b36c;
+  color: #fdfbfb;
+  border: none;
+  border-radius: 5px;
+  padding: 12px 24px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+button:active {
+  background-color: #004080;
+}
+
+/* Forms */
+input[type="text"],
+select,
+textarea {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+input[type="text"]:focus,
+select:focus,
+textarea:focus {
+  border-color: #cc3e5f;
+  outline: none;
+}
+
+/* Schema List */
+.schema-list {
+  margin-top: 20px;
+}
+
+.schema-list select {
+  margin: 5px 0;
+}
+
+.schema-list button {
+  background-color: #28a745;
+  color: #fff;
+  border-radius: 5px;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+.schema-list button:hover {
+  background-color: #213e88;
+}
+
+.schema-list button:active {
+  background-color: #1e7e34;
+}
+
+/* Footer */
+.footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.footer .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.footer p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.footer .footer-links {
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+}
+
+.footer .footer-links li {
+  display: inline;
+  margin: 0 10px;
+}
+
+.footer .footer-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+
+.footer .footer-links a:hover {
+  color: #bbb;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .header .nav ul {
+    flex-direction: column;
+  }
+
+  .header .nav ul li {
+    margin: 10px 0;
+  }
+
+  .main-content {
+    padding: 80px 10px 60px;
+  }
+
+  button {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+
+  input[type="text"],
+  select,
+  textarea {
+    font-size: 14px;
+  }
+}
+
+/* Schema List */
+.schema-list {
+  margin-top: 20px;
+}
+
+.schema-list select {
+  margin: 5px 10px 5px 0;
+}
+
+.schema-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.schema-item select {
+  flex: 1;
+}
+
+.schema-item button {
+  background-color: #dc3545;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 16px;
+  cursor: pointer;
+  margin-left: 10px;
+  font-size: 14px;
+}
+
+.schema-item button:hover {
+  background-color: #c82333;
+}
+
+.schema-item button:active {
+  background-color: #bd2130;
+}
